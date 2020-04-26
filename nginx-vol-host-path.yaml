@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: vol-nginx
+  name: vol-nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: vol-nginx
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: vol-nginx
+    spec:
+      containers:
+      - image: nginx
+        name: vol-nginx
+        volumeMounts:
+         - mountPath: /usr/share/nginx/html
+           name: mydir
+      volumes:
+      - name: mydir
+        hostPath:
+          path: /home/anshu/anshu/volume
+          type: Directory
+
