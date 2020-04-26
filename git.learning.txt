@@ -1,0 +1,18 @@
+Git:
+
+1: Clone : copy the the url
+2  Login to the terminal : to clone  locally :
+    eg: git  clone  https://github.com/Anshu-ArchCloud/k8s.git
+3: get into the git Directory
+     eg : cd k8s
+4 Add, edit , remove  files   directories within repo folder 
+
+procees to undo chanages :
+git fetch --all
+  296  git status
+  297  git  reset --hard  origin/master
+  298  git status
+  299  cd anshu
+  300  cat frstfile 
+   
+	 
